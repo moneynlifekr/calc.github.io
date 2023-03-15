@@ -1,0 +1,116 @@
+* {
+  font-size: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+table{
+  border-collapse: collapse;
+  font-size: 90%;
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td{
+  padding: 5px 10px;
+  border: 1px solid #000;
+}
+
+td{
+  text-align: right;
+}
+
+input{
+  border: 1px;
+  border-bottom: 1px solid #000;
+  width: 93%;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+select{
+  border: 1px;
+  border-bottom: 1px solid #000;
+  width: 93%;
+  text-align: right;
+}
+
+button{
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  font-weight: bold;
+  font-size: 95%;
+  margin-left: 15px;
+  margin-right: 22px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 249px;
+}
+
+.form{
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+  margin-right: 25px;
+  margin-left: 15px;
+  text-align: center;
+  font-size: 95%;
+}
+
+span{
+  display: inline-block;
+  width: 90px;
+}
+
+.head{
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.justify{
+  text-align: center;
+}
+
+.container{
+  margin-top: 5px;
+  width: 600px;
+}
+
+header,
+main,
+aside,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5vh;
+}
+
+div{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+header{
+  grid-area: header;
+  background-color: #e9940a;
+  font-weight: bold;
+}
+
+main{
+  grid-area: main;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+aside{
+  grid-area: side;
+  background-color: #7a7ea4;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #840c50;
+}
