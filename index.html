@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대출이자 계산기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1>대출이자 계산기</h1>
+  </header>
+  <!-- main -->
+  <main>
+    <div class="container">
+      <div>
+        <div class="head">
+          <h2>상환방법</h2>
+        </div>
+        <div>
+        <select name ="method" id = "method" size="1">
+          <option value="1">원리금균등상환</option>
+          <option value="2">원금균등상환</option>
+          <option value="3">만기일시상환</option>
+        </select>
+        </div>
+      </div>
+      <p></p>
+      <div>
+        <div class="head">
+          <h2>대출금액</h2>
+        </div>
+        <div>
+          <input type = "text" id = "money" value="10,000,000"> 원
+        </div>
+        <div class="justify">
+          <span class = "form" onclick="Javascript:moneyChange(0)">초기화</span>
+          <span class = "form" onclick="Javascript:moneyChange(1000000)">1백만원</span>
+          <span class = "form" onclick="Javascript:moneyChange(10000000)">1천만원</span>
+          <span class = "form" onclick="Javascript:moneyChange(100000000)">1억원</span>
+        </div>
+      </div>
+      <p></p>
+      <div>
+        <div class="head">
+          <h2>대출금리</h2></div>
+        <div>
+          <input type = "number" id = "interest" value = "3"> %
+        </div>
+        <div class="justify">
+          <span class = "form" onclick="Javascript:interestChange(0)">초기화</span>
+          <span class = "form" onclick="Javascript:interestChange(1)">1%</span>
+          <span class = "form" onclick="Javascript:interestChange(2)">2%</span>
+          <span class = "form" onclick="Javascript:interestChange(5)">5%</span>
+        </div>
+      </div>
+      <p></p>
+      <div>
+        <div class="head">
+          <h2>대출기간</h2>
+        </div>
+        <div>
+          <input type = "number" id = "period" value = "12"> 개월
+        </div>
+        <div class="justify">
+          <span class = "form" onclick="Javascript:periodChange(0)">초기화</span>
+          <span class = "form" onclick="Javascript:periodChange(12)">1년</span>
+          <span class = "form" onclick="Javascript:periodChange(24)">2년</span>
+          <span class = "form" onclick="Javascript:periodChange(60)">5년</span>
+        </div>
+      </div>
+      <p></p>
+      <div>
+        <div class="head">
+          <h2>거치기간</h2>
+        </div>
+        <div>
+          <input type = "number" id = "period2" value = "0"> 개월
+        </div>
+        <div class="justify">
+          <span class = "form" onclick="Javascript:period2Change(0)">초기화</span>
+          <span class = "form" onclick="Javascript:period2Change(3)">3개월</span>
+          <span class = "form" onclick="Javascript:period2Change(6)">6개월</span>
+          <span class = "form" onclick="Javascript:period2Change(12)">1년</span>
+        </div>
+      </div>
+      <div class="justify">
+        <button type = "submit" id = "calc">계산하기</button>
+        <button type = "submit" id = "clear">다시작성</button>
+      </div>
+      <div>
+        원리금균등상환
+        <p></p>
+        원금균등상환
+        <p></p>
+        만기일시상환
+      </div>
+      <p></p>
+      <div>
+        <table class="table">
+          <tr>
+            <th>회차</th>
+            <th>이자</th>
+            <th>납입원금</th>
+            <th>상환금</th>
+            <th>납입금합산</th>
+            <th>잔금</th>
+          </tr>
+          <tbody id="calctable">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <!-- aside -->
+  <aside>
+    aside
+  </aside>
+  <!-- footer -->
+  <footer>copyright 2023</footer>
+  <script src = 'calc.js'></script>
+</body>
+</html>
